@@ -1,19 +1,16 @@
 <script>
   import {
     totalCartItems,
-    categories,
-    selectedCategory,
     showMenu,
   } from "../helpers/store";
   import Menu from "./Menu.svelte";
 
-  export let segment;
+  // export let segment;
 
   const toggleMenu = () => {
     $showMenu = !$showMenu;
   };
 
-  $: console.log(segment);
 </script>
 
 {#if $showMenu}

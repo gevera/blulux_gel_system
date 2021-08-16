@@ -3,13 +3,13 @@
 
   const catgs = [
     {
-      name: "tops",
+      name: "bases & tops",
       pic: "/pics/about_1.jpg",
       description:
         "Blulux base and top is a professional range of long-wearing and perfect shine gel products, with ideal consistency that allows an easy completion of the perfect manicure.",
     },
     {
-      name: "bases",
+      name: "cover bases",
       pic: "/pics/about_3.jpg",
       description:
         "A range of Blulux multifunctional rubber cover bases. It is a high quality coverege gel product with medium viscosity, provides an easy solution for a nude or french manicure.",
@@ -46,18 +46,18 @@
         <li on:click={() => ($selectedCategory = category)}>
           <a
             rel="prefetch"
-            href={`/products#${category}`}
+            href={`/products#${category.split(" ").join("")}`}
             class="categ"
             class:rev={i % 2}
           >
-            <img src={getCat(category).pic} alt="" class="img" loading="lazy" />
+            <img src={getCat(category)?.pic ||'/pics/about_1.jpg'} alt="" class="img" loading="lazy" />
 
             <div class="content">
               <h3>
                 {category}
               </h3>
               <p>
-                {getCat(category).description}
+                {getCat(category)?.description || 'No words on earth can describe this. You have to try it!'}
               </p>
             </div>
           </a>

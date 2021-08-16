@@ -69,7 +69,7 @@
   {#if $categories.length}
     {#each $categories as category}
       <li on:click={() => ($selectedCategory = category)}>
-        <a rel="prefetch" href={`/products#${category}`}>{category}</a>
+        <a rel="prefetch" href={`/products#${category.split(" ").join("")}`}>{category}</a>
       </li>
     {/each}
   {/if}
@@ -77,7 +77,7 @@
 
 <ul class="container">
   {#each filteredProducts as category (category.name)}
-    <div id={category.name} class="category">
+    <div id={category.name.split(" ").join("")} class="category">
       <li>
         <h2 class="category-name">{category.name}</h2>
         <ul class="items">
