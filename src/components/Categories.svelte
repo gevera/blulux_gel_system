@@ -32,6 +32,12 @@
       description:
         "Best-in-class instruments are simple and multifunctional in use. Carbide Cutters feature fast performance, lower heating and almost no dust while Diamond Burs are used for work with soft tissues – end of nail plate as well as cuticle removal.",
     },
+    {
+      name: "specials",
+      pic: "/pics/about_4.jpg",
+      description:
+        "Our special gels and tools.",
+    },
   ];
 
   const getCat = (cat) => catgs.filter((c) => c.name == cat)[0];

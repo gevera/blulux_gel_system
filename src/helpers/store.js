@@ -11,7 +11,11 @@ export const cartTotal = derived(cart, ($cart) =>
 );
 export const categories = derived(productList, ($productList) => [
   // "all",
-  ...new Set($productList.map((p) => p?.metadata?.category)),
+  ...new Set(
+    $productList.map((p) =>
+      p?.metadata?.category ? p?.metadata?.category : "specials"
+    )
+  ),
 ]);
 
 export const categoriesProd = derived(
@@ -19,7 +23,13 @@ export const categoriesProd = derived(
   ([$productList, $categories]) =>
     $categories.map((c) => ({
       name: c,
-      products: $productList.filter((p) => p.metadata?.category == c),
+      products: $productList.filter((p) => {
+        if (c != "specials" && p.metadata?.category == c) {
+          return p;
+        } else if (c == "specials" && !p.metadata.hasOwnProperty("category")) {
+          return p;
+        }
+      }),
     }))
 );
 export const selectedCategory = writable("all");

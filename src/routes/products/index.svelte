@@ -128,6 +128,7 @@
   .categories > li > a {
     color: var(--gray-light);
     padding-bottom: 0.2rem;
+    white-space: nowrap;
   }
   .container {
     margin: 1rem 0;

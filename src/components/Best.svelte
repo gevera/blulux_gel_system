@@ -8,19 +8,20 @@
   );
 </script>
 
-<div id="best-sellers">
-  <h2>Our Best Sellers</h2>
+{#if specialProducts.length > 0}
+  <div id="best-sellers">
+    <h2>Our Best Sellers</h2>
 
-  <!-- <pre>{JSON.stringify(specialProducts, null, 2)}</pre> -->
-  <div class="swiper">
-    {#each specialProducts as product (product.id)}
-      <div class="wd">
-        <ProductCard {product} />
-      </div>
-    {/each}
+    <!-- <pre>{JSON.stringify(specialProducts, null, 2)}</pre> -->
+    <div class="swiper">
+      {#each specialProducts as product (product.id)}
+        <div class="wd">
+          <ProductCard {product} />
+        </div>
+      {/each}
+    </div>
   </div>
-</div>
-
+{/if}
 <style>
   #best-sellers {
     margin: 1.5rem;

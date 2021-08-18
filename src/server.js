@@ -9,7 +9,8 @@ const { PORT, NODE_ENV, STRIPE_SECRET_KEY_TEST, STRIPE_SECRET_KEY } =
 const dev = NODE_ENV === "development";
 const app = express();
 export const stripe = require("stripe")(
-  dev ? STRIPE_SECRET_KEY_TEST : STRIPE_SECRET_KEY,
+  // dev ? STRIPE_SECRET_KEY_TEST : STRIPE_SECRET_KEY,
+  STRIPE_SECRET_KEY,
   {
     apiVersion: "2020-08-27",
   }
