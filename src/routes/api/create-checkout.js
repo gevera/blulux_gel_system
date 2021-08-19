@@ -28,8 +28,8 @@ export async function post(req, res) {
       cancel_url: "https://bluluxshop.com/cancel",
       billing_address_collection: "auto",
       shipping_rates: freeShipping
-        ? ["shr_1JP98AE2Lv1oi1f0hrGe5HNg"]
-        : ["shr_1JP86sE2Lv1oi1f06r4LQ5Rq"],
+        ? ["shr_1JPsUAE2Lv1oi1f0l8dqMIPb"]
+        : ["shr_1JPsUHE2Lv1oi1f0oFRkSG7V"],
       shipping_address_collection: {
         allowed_countries: ["GB"],
       },
