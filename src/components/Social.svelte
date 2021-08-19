@@ -2,6 +2,7 @@
   <li>
     <a
       href="https://www.instagram.com/blulux_gel/?hl=en"
+      rel="noreferrer"
       target="_blank"
       aria-label="Instagram account"
     >
@@ -31,6 +32,7 @@
   <li>
     <a
       href="https://www.facebook.com/Blulux-Gel-System-101942135388111/"
+      rel="noreferrer"
       target="_blank"
       aria-label="Facebook page"
     >
@@ -54,7 +56,11 @@
     </a>
   </li>
   <li>
-    <a href="mailto:bluluxgelsystem@gmail.com" aria-label="Send us an email">
+    <a
+      href="mailto:bluluxgelsystem@gmail.com"
+      aria-label="Send us an email"
+      rel="noreferrer"
+    >
       <svg
         xmlns="http://www.w3.org/2000/svg"
         class="icon icon-tabler icon-tabler-mail"

@@ -19,10 +19,10 @@
     <Social />
     <p>All rights reserved. {new Date().getFullYear()}</p>
     <p id="made">
-      Made with <a href="https://sapper.svelte.dev/" target="_blank">Sapper</a>,
-      <a href="https://stripe.com" target="_blank">Stripe</a>
+      Made with <a href="https://sapper.svelte.dev/" rel="noreferrer" target="_blank">Sapper</a>,
+      <a href="https://stripe.com" rel="noreferrer" target="_blank">Stripe</a>
       & <span>♥</span> by
-      <a href="https://twitter.com/skryonline" target="_blank">SKRY | Online</a>
+      <a href="https://twitter.com/skryonline" rel="noreferrer" target="_blank">SKRY | Online</a>
     </p>
   </div>
 </footer>

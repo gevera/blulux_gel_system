@@ -14,11 +14,13 @@
 
     <!-- <pre>{JSON.stringify(specialProducts, null, 2)}</pre> -->
     <div class="swiper">
-      {#each specialProducts as product (product.id)}
-        <div class="wd">
+      <ul>
+        {#each specialProducts as product (product.id)}
+        <li class="wd">
           <ProductCard {product} />
-        </div>
-      {/each}
+        </li>
+        {/each}
+      </ul>
     </div>
   </div>
 {/if}

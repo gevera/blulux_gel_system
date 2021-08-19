@@ -18,7 +18,7 @@
 {/if}
 
 <nav>
-  <button id="menu" on:click={toggleMenu}>
+  <button id="menu" on:click={toggleMenu} aria-label="Toggle Menu">
     <svg
       xmlns="http://www.w3.org/2000/svg"
       class="icon icon-tabler icon-tabler-align-left"

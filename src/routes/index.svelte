@@ -7,6 +7,10 @@
   }
 </script>
 
+<svelte:head>
+  <title>Homepage | Blulux Shop</title>
+</svelte:head>
+
 <script>
   import Hero from "../components/Hero.svelte";
   import Best from "../components/Best.svelte";

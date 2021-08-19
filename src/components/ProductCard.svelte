@@ -27,7 +27,7 @@
   };
 </script>
 
-<li class="item">
+<div class="item">
   <div class="image-wrapper">
     <div
       class="product-avatar"
@@ -53,7 +53,7 @@
       <p class="out">Out of stock</p>
     {/if}
   </div>
-</li>
+</div>
 
 <style>
   .item {

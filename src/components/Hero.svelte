@@ -1,5 +1,5 @@
 <div id="start">
-  <img src="hero.jpg" alt="Front products" />
+  <img src="/pics/hero.jpg" alt="Front products" />
 </div>
 
 <style>
