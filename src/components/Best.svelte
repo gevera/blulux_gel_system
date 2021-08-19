@@ -13,17 +13,16 @@
     <h2>Our Best Sellers</h2>
 
     <!-- <pre>{JSON.stringify(specialProducts, null, 2)}</pre> -->
-    <div class="swiper">
-      <ul>
-        {#each specialProducts as product (product.id)}
+    <ul class="swiper">
+      {#each specialProducts as product (product.id)}
         <li class="wd">
           <ProductCard {product} />
         </li>
-        {/each}
-      </ul>
-    </div>
+      {/each}
+    </ul>
   </div>
 {/if}
+
 <style>
   #best-sellers {
     margin: 1.5rem;

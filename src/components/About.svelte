@@ -6,7 +6,7 @@
     professional nail tecnicians. We are glad to serve our clients since 2019.
   </p>
 
-  <a href="/about" class="btn">Learn More</a>
+  <a href="/about" class="btn" aria-label="Go to About page">Learn More</a>
 </div>
 
 <style>
