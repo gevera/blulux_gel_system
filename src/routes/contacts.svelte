@@ -70,7 +70,7 @@
     <div class="flx">
       <div class="info">
         <p>
-          If you have questions about you're order, our products or anything
+          If you have questions about your order, our products or anything
           else, shoot us an <a href="mailto:bluluxgelsystem@gmail.com">email</a>
           Or you can let us know how we can help you by completing the form.
         </p>

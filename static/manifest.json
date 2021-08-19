@@ -1,20 +1,20 @@
 {
 	"background_color": "#ffffff",
 	"theme_color": "#333333",
-	"name": "TODO",
-	"short_name": "TODO",
+	"name": "Blulux Shop",
+	"short_name": "Bluluxshop",
 	"display": "minimal-ui",
 	"start_url": "/",
 	"icons": [
 		{
 			"src": "logo-192.png",
-			"sizes": "192x192",
+			"sizes": "192x106",
 			"type": "image/png",
 			"purpose": "any maskable"
 		},
 		{
 			"src": "logo-512.png",
-			"sizes": "512x512",
+			"sizes": "512x282",
 			"type": "image/png",
 			"purpose": "any maskable"
 		}
