@@ -4,8 +4,9 @@
   import { loadStripe } from "@stripe/stripe-js";
   let stripe;
   onMount(async () => {
-    const dev = process.env.NODE_ENV === "development";
-    stripe = await loadStripe(dev ? STRIPE_PUBLIC_KEY_TEST : STRIPE_PUBLIC_KEY);
+    // const dev = process.env.NODE_ENV === "development";
+    // stripe = await loadStripe(dev ? STRIPE_PUBLIC_KEY_TEST : STRIPE_PUBLIC_KEY);
+    stripe = await loadStripe(STRIPE_PUBLIC_KEY);
   });
 
   
