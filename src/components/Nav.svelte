@@ -40,7 +40,7 @@
   <a rel="prefetch" href="/#start" id="home">
     <img src="blulux-logo.png" alt="Blulux Logo" />
   </a>
-  <a href="/cart" id="cart">
+  <a href="/cart" id="cart" aria-label="Shopping Cart Page">
     <div class="flx">
       <svg
         xmlns="http://www.w3.org/2000/svg"

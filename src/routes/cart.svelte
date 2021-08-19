@@ -6,7 +6,7 @@
   onMount(async () => {
     // const dev = process.env.NODE_ENV === "development";
     // stripe = await loadStripe(dev ? STRIPE_PUBLIC_KEY_TEST : STRIPE_PUBLIC_KEY);
-    stripe = await loadStripe(STRIPE_PUBLIC_KEY);
+    stripe = await loadStripe('pk_live_51JIrGJE2Lv1oi1f06ivdIDtc5a20GUeImDC7w8HtjjdM43oYpQSi41D99FjB3EJYVcb2Bub5n3QrtWSqZV1oLLuD00bAnRhkjg');
   });
 
   

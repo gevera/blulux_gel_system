@@ -3,7 +3,14 @@
 The default template for setting up a [Sapper](https://github.com/sveltejs/sapper) project. Can use either Rollup or webpack as bundler.
 
 
-## Getting started
+## Setting up pm2 to run for production
+
+```pm2 start --name blulux __sapper__/build/index.js --node-args="-r dotenv/config"```
+
+## Allowing nginx to work as proxy
+
+```sudo setsebool -P httpd_can_network_connect 1```
+
 
 
 ### Using `degit`

@@ -24,8 +24,8 @@ export async function post(req, res) {
       mode: "payment",
       allow_promotion_codes: true,
       success_url:
-        "http://localhost:3000/success?session_id={CHECKOUT_SESSION_ID}",
-      cancel_url: "http://localhost:3000/cancel",
+        "https://bluluxshop.com/success?session_id={CHECKOUT_SESSION_ID}",
+      cancel_url: "https://bluluxshop.com/cancel",
       billing_address_collection: "auto",
       shipping_rates: freeShipping
         ? ["shr_1JP98AE2Lv1oi1f0hrGe5HNg"]
