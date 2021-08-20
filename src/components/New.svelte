@@ -9,7 +9,9 @@
   <div class="container">
     <ul>
       {#each newProducts as product}
+      <li>
         <ProductCard {product} />
+      </li>
       {/each}
     </ul>
   </div>
