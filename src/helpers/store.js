@@ -14,7 +14,7 @@ export const categories = derived(productList, ($productList) => [
   ...new Set(
     $productList.map((p) =>
       p?.metadata?.category ? p?.metadata?.category : "specials"
-    )
+    ).reverse()
   ),
 ]);
 
@@ -30,8 +30,9 @@ export const categoriesProd = derived(
           return p;
         }
       }),
-    }))
+    })).reverse()
 );
+
 export const selectedCategory = writable("all");
 
 // Bases and tops

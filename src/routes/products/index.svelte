@@ -76,7 +76,7 @@
 </ul>
 
 <ul class="container">
-  {#each filteredProducts as category (category.name)}
+  {#each filteredProducts.reverse() as category (category.name)}
     <div id={category.name.split(" ").join("")} class="category">
       <li>
         <h2 class="category-name">{category.name}</h2>
