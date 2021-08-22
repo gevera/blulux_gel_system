@@ -65,7 +65,7 @@
   </div>
 {/if}
 
-<Sharedpage coverName="Contact us" coverImage="/pics/nails_1.jpg">
+<Sharedpage coverName="Contact us" coverImage="/pics/contacts_2.jpg">
   <div class="container">
     <div class="flx">
       <div class="info">

@@ -4,19 +4,19 @@
   const catgs = [
     {
       name: "bases & tops",
-      pic: "/pics/about_1.jpg",
+      pic: "/pics/tops_1.jpg",
       description:
         "Blulux base and top is a professional range of long-wearing and perfect shine gel products, with ideal consistency that allows an easy completion of the perfect manicure.",
     },
     {
       name: "cover bases",
-      pic: "/pics/about_3.jpg",
+      pic: "/pics/cover_bases.jpg",
       description:
         "A range of Blulux multifunctional rubber cover bases. It is a high quality coverege gel product with medium viscosity, provides an easy solution for a nude or french manicure.",
     },
     {
       name: "builders",
-      pic: "/pics/faq.jpg",
+      pic: "/pics/about_3.jpg",
       description:
         "Blulux camuflage builder hard gels with unique formulation that allows a long lasting nail enhanchement, gel overlay, gel strengthening. They are LED or UV curable, self-leveling and medium-thick viscosity.",
     },
@@ -28,9 +28,9 @@
     },
     {
       name: "tools",
-      pic: "/pics/about_2.jpg",
+      pic: "/pics/tools.jpg",
       description:
-        "Best-in-class instruments are simple and multifunctional in use. Carbide Cutters feature fast performance, lower heating and almost no dust while Diamond Burs are used for work with soft tissues – end of nail plate as well as cuticle removal.",
+        "Best-in-class instruments are simple and multifunctional in use. Carbide Cutters feature fast performance, lower heating and almost no dust while Diamond Burs are used for work with soft tissues – end of nail plate as well as cuticle removal. They are all made in Russia.",
     },
     {
       name: "specials",
@@ -48,7 +48,7 @@
   <ul class="col">
     <!-- <li><input type="text" placeholder="search" /></li> -->
     {#if $categories.length}
-      {#each $categories as category, i}
+      {#each $categories as category, i (i)}
         <li on:click={() => ($selectedCategory = category)}>
           <a
             rel="prefetch"

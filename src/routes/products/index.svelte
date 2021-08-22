@@ -67,7 +67,7 @@
 </div>
 <ul class="categories">
   {#if $categories.length}
-    {#each $categories as category}
+    {#each $categories as category, i (i)}
       <li on:click={() => ($selectedCategory = category)}>
         <a rel="prefetch" href={`/products#${category.split(" ").join("")}`}>{category}</a>
       </li>
@@ -76,12 +76,12 @@
 </ul>
 
 <ul class="container">
-  {#each filteredProducts.reverse() as category (category.name)}
+  {#each filteredProducts.reverse() as category, i (i)}
     <div id={category.name.split(" ").join("")} class="category">
       <li>
         <h2 class="category-name">{category.name}</h2>
         <ul class="items">
-          {#each category.products as product (product.id)}
+          {#each category.products as product, i (i)}
             <ProductCard {product} />
           {/each}
         </ul>

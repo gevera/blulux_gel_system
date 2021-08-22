@@ -17,12 +17,21 @@
       </a>
     </div>
     <Social />
+    <div class="hema-free">
+      <img src="/hema_free.svg" alt="Hema Free" />
+    </div>
     <p>All rights reserved. {new Date().getFullYear()}</p>
     <p id="made">
-      Made with <a href="https://sapper.svelte.dev/" rel="noreferrer" target="_blank">Sapper</a>,
+      Made with <a
+        href="https://sapper.svelte.dev/"
+        rel="noreferrer"
+        target="_blank">Sapper</a
+      >,
       <a href="https://stripe.com" rel="noreferrer" target="_blank">Stripe</a>
       & <span>♥</span> by
-      <a href="https://twitter.com/skryonline" rel="noreferrer" target="_blank">SKRY | Online</a>
+      <a href="https://twitter.com/skryonline" rel="noreferrer" target="_blank"
+        >SKRY | Online</a
+      >
     </p>
   </div>
 </footer>
@@ -64,6 +73,13 @@
   img {
     margin-top: 1rem;
     max-width: 260px;
+  }
+
+  .hema-free {
+    margin: 0 auto;
+    padding-bottom: 2rem;
+    display: flex;
+    justify-content: center;
   }
 
   #logo {

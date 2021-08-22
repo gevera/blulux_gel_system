@@ -14,7 +14,7 @@
 
     <!-- <pre>{JSON.stringify(specialProducts, null, 2)}</pre> -->
     <ul class="swiper">
-      {#each specialProducts as product (product.id)}
+      {#each specialProducts as product, i (i)}
         <li class="wd">
           <ProductCard {product} />
         </li>

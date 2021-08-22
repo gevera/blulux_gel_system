@@ -34,8 +34,3 @@ export const categoriesProd = derived(
 );
 
 export const selectedCategory = writable("all");
-
-// Bases and tops
-// Builder gel
-// Acrygel
-// Tools

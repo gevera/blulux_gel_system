@@ -8,7 +8,7 @@
   <h2>New Arrivals</h2>
   <div class="container">
     <ul>
-      {#each newProducts as product}
+      {#each newProducts as product, i (i)}
       <li>
         <ProductCard {product} />
       </li>

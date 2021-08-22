@@ -34,14 +34,14 @@
 
     <p class="mw ingridients">
       One of the main goals of the brand is to reduce allergies, thus creating
-      the HEMA FREE, HPMA FREE, 10 FREE formula. According to BOD (British
+      the HEMA FREE, HPMA FREE,9 FREE formula. According to BOD (British
       Association of Dermatologists ), HEMA and HPMA are first allergen
       ingredients in nail products. Commonly known as hydroxyethyl methacrylate
       and hydroxypropyl methacrylate are monomers used in nail products for
       adhesion, dilution and polymerization of UV gels. The concentration over
       35% may cause dermatitis allergies and chemical burns. Blulux gels are
       absent of 10 toxic ingredients: Formaldehyde, Toluene, DBP, Camphor,
-      Formaldehyde resin, Xylene, Parabens, Fragrances, Phthalates, Animal
+      Formaldehyde resin, Xylene, Parabens, Phthalates, Animal
       ingredients.
     </p>
 
@@ -124,7 +124,7 @@
   }
 
   .gemini > .img {
-    background: url("/pics/about_3.jpg");
+    background: url("/pics/about_2.jpg");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;

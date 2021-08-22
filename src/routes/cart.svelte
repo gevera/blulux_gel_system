@@ -37,7 +37,7 @@
 {#if $cart.length}
   <div id="cart">
     <ul>
-      {#each $cart as product (product.id)}
+      {#each $cart as product, i (i)}
         <li class="item">
           <div
             class="product-avatar"
