@@ -10,7 +10,7 @@
     },
     {
       name: "cover bases",
-      pic: "/pics/cover_bases.jpg",
+      pic: "/pics/nails_1.jpg",
       description:
         "A range of Blulux multifunctional rubber cover bases. It is a high quality coverege gel product with medium viscosity, provides an easy solution for a nude or french manicure.",
     },
@@ -22,7 +22,7 @@
     },
     {
       name: "acrygels",
-      pic: "/pics/nails_1.jpg",
+      pic: "/pics/cover_bases.jpg",
       description:
         "A true hybrid between hard gel system and acrylic system. AcryGels are more flexible than acrylic and stronger than hard gels. They are perfect for long, short nail enhancement, overlay and strengthening. Avalable in 8 shades.",
     },

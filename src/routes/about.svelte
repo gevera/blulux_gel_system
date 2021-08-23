@@ -40,7 +40,7 @@
       and hydroxypropyl methacrylate are monomers used in nail products for
       adhesion, dilution and polymerization of UV gels. The concentration over
       35% may cause dermatitis allergies and chemical burns. Blulux gels are
-      absent of 10 toxic ingredients: Formaldehyde, Toluene, DBP, Camphor,
+      absent of 9 toxic ingredients: Formaldehyde, Toluene, DBP, Camphor,
       Formaldehyde resin, Xylene, Parabens, Phthalates, Animal
       ingredients.
     </p>
