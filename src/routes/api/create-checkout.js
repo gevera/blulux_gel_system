@@ -6,7 +6,7 @@ export async function post(req, res) {
     const { cart } = req.body;
         
     const cartTotal = cart.reduce((acc, p) => p.price * p.qty + acc, 0);
-    const freeShipping = cartTotal >= 2000;
+    const freeShipping = cartTotal >= 2500;
     // console.log("CART IN CHECKOUT", cart);
    
     const lineItems = cart.map((p) => ({
@@ -29,7 +29,7 @@ export async function post(req, res) {
       billing_address_collection: "auto",
       shipping_rates: freeShipping
         ? ["shr_1JPsUAE2Lv1oi1f0l8dqMIPb"]
-        : ["shr_1JPsUHE2Lv1oi1f0oFRkSG7V"],
+        : ["shr_1JSO2JE2Lv1oi1f0DKa0ZCxe"],
       shipping_address_collection: {
         allowed_countries: ["GB"],
       },

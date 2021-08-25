@@ -69,20 +69,18 @@
     {product.name}
   </h3>
   <div class="description">
-    
     <p>{product?.description || ""}</p>
-  
   </div>
   <div>
-    {#if product.active}
+    {#if product?.metadata?.stock == "0"}
+      <p class="out">Out of stock</p>
+    {:else}
       <div class="numbers">
         <p>£{(product.price / 100).toFixed(2)}</p>
       </div>
       <button class="btn" on:click={() => addToCart(product)}
         >Add to cart</button
       >
-    {:else}
-      <p class="out">Out of stock</p>
     {/if}
   </div>
 </div>
@@ -196,7 +194,6 @@
     right: 0;
     display: grid;
     place-items: center;
-
   }
 
   .modal-picture {
