@@ -17,14 +17,14 @@
     <div class="gemini">
       <div class="img" />
 
-      <div>
+      <div class="explain">
         <p>
-          Based in United Kingdom Blulux Gel System is a brand that provides
+          Based in United Kingdom <span>Blulux Gel System</span> is a brand that provides
           ideal gels and tools for nail therapists that makes their job a joy.
         </p>
         <p>
           Premium quality products were created with all modern criteria and
-          requirements taken into account. Blulux Gel System is a professional
+          requirements taken into account. <span>Blulux Gel System</span> is a professional
           range of gel products, hard-wearing and easy to use, come completely
           safety assured and offers a cruelty free and vegan solution for a
           perfect look.
@@ -90,6 +90,7 @@
   .container {
     line-height: 1.5;
     font-size: 1.4rem;
+    padding-bottom: 4rem;
   }
 
   .ms {
@@ -99,6 +100,10 @@
     font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
       Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
     text-transform: uppercase;
+  }
+
+  .explain > p {
+    color: var(--gray-dark);
   }
 
   h3 {
@@ -147,6 +152,11 @@
     font-size: 2rem;
     padding-left: 2rem;
     border-left: 4px solid var(--brand-light);
+  }
+
+  span {
+    font-style: normal;
+    color: var(--black);
   }
 
   @media (max-width: 768px) {

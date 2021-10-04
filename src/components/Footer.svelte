@@ -8,7 +8,7 @@
       <li><a href="/#start">Home</a></li>
       <li><a href="/products#top">Products</a></li>
       <li><a href="/about">About</a></li>
-      <!-- <li><a href="/faq">F.A.Q.</a></li> -->
+      <li><a href="/privacy-policy">Privacy Policy</a></li>
       <li><a href="/contacts">Contacts</a></li>
     </ul>
     <div id="logo">

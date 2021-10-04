@@ -5,7 +5,7 @@ The default template for setting up a [Sapper](https://github.com/sveltejs/sappe
 
 ## Setting up pm2 to run for production
 
-```pm2 start --name blulux __sapper__/build/index.js --node-args="-r dotenv/config"```
+```pm2 start --name blulux __sapper__/build/index.js --max-memory-restart 300M --node-args="-r dotenv/config"```
 
 ## Allowing nginx to work as proxy
 
