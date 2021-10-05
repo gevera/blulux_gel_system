@@ -9,6 +9,7 @@
       <li><a href="/products#top">Products</a></li>
       <li><a href="/about">About</a></li>
       <li><a href="/privacy-policy">Privacy Policy</a></li>
+      <li><a href="/terms-conditions">Terms & Conditions</a></li>
       <li><a href="/contacts">Contacts</a></li>
     </ul>
     <div id="logo">
@@ -62,7 +63,7 @@
     margin-bottom: 1.5rem;
     line-height: 1.2;
   }
-  li {
+  a {
     padding: 0.6rem;
   }
 

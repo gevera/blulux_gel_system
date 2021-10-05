@@ -5,7 +5,7 @@
 <div class="container">
   <h2>EFFECTIVE DATE: JUNE 22, 2021</h2>
   <p>
-    Bluluxshop, LLP. ("us", "we", or "our") operates the <a
+    Bluluxshop, LTD. ("us", "we", or "our") operates the <a
       href="https://bluluxshop.com">https://bluluxshop.com</a
     >
     website (the "Service").
@@ -28,7 +28,7 @@
       <li>
         SERVICEService is the <a href="https://bluluxshop.com"
           >https://bluluxshop.com</a
-        >  website operated by Bluluxshop, LLP.
+        >  website operated by Bluluxshop, LTD.
       </li>
       <li>
         PERSONAL DATAPersonal Data means data about a living individual who can
@@ -126,7 +126,7 @@
   </div>
   <div>
     <h2>USE OF DATA</h2>
-    <p>Bluluxshop, LLP. uses the collected data for various purposes:</p>
+    <p>Bluluxshop, LTD. uses the collected data for various purposes:</p>
     <ul>
       <li>To provide and maintain our Service</li>
       <li>To notify you about changes to our Service</li>
@@ -164,7 +164,7 @@
     </p>
     <p>
       Your consent to this Privacy Policy followed by your submission of such
-      information represents your agreement to that transfer. Bluluxshop, LLP.
+      information represents your agreement to that transfer. Bluluxshop, LTD.
       will take all steps reasonably necessary to ensure that your data is
       treated securely and in accordance with this Privacy Policy and no
       transfer of your Personal Data will take place to an organization or a
@@ -176,7 +176,7 @@
   <div>
     <h3>DISCLOSURE FOR LAW ENFORCEMENT</h3>
     <p>
-      Under certain circumstances, Bluluxshop, LLP. may be required to disclose
+      Under certain circumstances, Bluluxshop, LTD. may be required to disclose
       your Personal Data if required to do so by law or in response to valid
       requests by public authorities (e.g. a court or a government agency).
     </p>
@@ -184,12 +184,12 @@
   <div>
     <h3>LEGAL REQUIREMENTS</h3>
     <p>
-      Bluluxshop LLP. may disclose your Personal Data in the good faith belief
+      Bluluxshop LTD. may disclose your Personal Data in the good faith belief
       that such action is necessary to:
     </p>
     <ul>
       <li>To comply with a legal obligation</li>
-      <li>To protect and defend the rights or operty of Bluluxshop, LLP.</li>
+      <li>To protect and defend the rights or operty of Bluluxshop, LTD.</li>
       <li>
         To prevent or investigate possible wrongdoing in connection with the
         Service
@@ -265,7 +265,7 @@
   <div>
     <h2>BEHAVIORAL REMARKETING</h2>
     <p>
-      Bluluxshop, LLP. uses remarketing services to advertise on third party
+      Bluluxshop, LTD. uses remarketing services to advertise on third party
       websites to you after you visited our Service. We and our third-party
       vendors use cookies to inform, optimize and serve ads based on your past
       visits to our Service.
