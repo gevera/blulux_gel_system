@@ -34,7 +34,7 @@
   });
   // $: console.log($page.query);
 
-  $: console.log(data);
+  // $: console.log(data);
 </script>
 
 <svelte:head>
@@ -62,7 +62,7 @@
     </div>
     
     <p>Your confirmation order number is</p>
-    <h3>{data?.payment_intent.slice(-6)}</h3>
+    <h3>{data?.payment_intent.slice(-7)}</h3>
     <a href="/products" class="btn">Go back shopping</a>
   </div>
   <!-- <pre>{JSON.stringify(data, null, 2)}</pre> -->
