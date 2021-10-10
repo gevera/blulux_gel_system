@@ -21,7 +21,7 @@
     <div class="hema-free">
       <img src="/hema_free.svg" alt="Hema Free" />
     </div>
-    <p>All rights reserved. {new Date().getFullYear()}</p>
+    <p>All rights reserved | {new Date().getFullYear()}</p>
     <p id="made">
       Made with <a
         href="https://sapper.svelte.dev/"
@@ -29,7 +29,7 @@
         target="_blank">Sapper</a
       >,
       <a href="https://stripe.com" rel="noreferrer" target="_blank">Stripe</a>
-      & <span>♥</span> by
+      & <span class="heart">♥</span> by
       <a href="https://twitter.com/skryonline" rel="noreferrer" target="_blank"
         >SKRY | Online</a
       >
@@ -99,5 +99,11 @@
 
   p > span {
     font-size: 1.6rem;
+  }
+
+  .heart {
+    padding-left: 3px;
+    padding-right: 3px;
+    font-size: 1.4rem;
   }
 </style>

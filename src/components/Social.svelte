@@ -1,7 +1,7 @@
 <ul id="social">
   <li>
     <a
-      href="https://www.instagram.com/blulux_gel/?hl=en"
+      href="https://www.instagram.com/bluluxshop/"
       rel="noreferrer"
       target="_blank"
       aria-label="Instagram account"
