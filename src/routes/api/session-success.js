@@ -1,8 +1,8 @@
 import { stripe } from "../../server";
 
 import fetch from "node-fetch";
-import { db } from "../../server";
-import { findOrder, createOrder } from "../../helpers/db.js";
+import { db, sendMail_now } from "../../server";
+import { findOrder, createOrder } from "../../helpers";
 
 export async function post(req, res) {
   try {
@@ -44,6 +44,14 @@ export async function post(req, res) {
         line2,
         postal_code,
       ]);
+
+      const resEmail = await sendMail_now({
+        name,
+        email,
+        confirm_number: confirmNumber,
+        city,
+        total_amount: totalAmount,
+      });
 
       const resTelega = await fetch("https://bot.skrymenu.com", {
         method: "POST",

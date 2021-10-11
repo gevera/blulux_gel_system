@@ -31,7 +31,7 @@ export async function post(req, res) {
         ? ["shr_1JPsUAE2Lv1oi1f0l8dqMIPb"]
         : ["shr_1JSO2JE2Lv1oi1f0DKa0ZCxe"],
       shipping_address_collection: {
-        allowed_countries: ["GB"],
+        allowed_countries: ["GB", "IE", "BE", "IT", "NL"],
       },
       line_items: lineItems,
     });
