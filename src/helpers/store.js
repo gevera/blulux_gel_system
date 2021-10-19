@@ -1,6 +1,7 @@
 import { writable, derived } from "svelte/store";
 
 export const showMenu = writable(false);
+export const shippingCountry = writable('');
 export const productList = writable([]);
 export const cart = writable([]);
 export const totalCartItems = derived(cart, ($cart) =>

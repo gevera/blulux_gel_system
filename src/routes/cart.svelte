@@ -1,6 +1,6 @@
 <script>
   import { onMount } from "svelte";
-  import { cart, cartTotal } from "../helpers/store";
+  import { cart, cartTotal, shippingCountry } from "../helpers/store";
   import { loadStripe } from "@stripe/stripe-js";
   let stripe;
   onMount(async () => {
@@ -17,7 +17,7 @@
         Accept: "application/json",
         "Content-Type": "application/json",
       },
-      body: JSON.stringify({ cart: $cart.filter((p) => p.qty != 0) }),
+      body: JSON.stringify({ cart: $cart.filter((p) => p.qty != 0), countryCode: $shippingCountry }),
     });
     if (res.ok) {
       const id = await res.json();
