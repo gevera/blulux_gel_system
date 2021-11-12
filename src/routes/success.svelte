@@ -44,7 +44,7 @@
 {#if data}
   <div class="container">
     <h2>Awesome!</h2>
-    <p>Your orderd has been placed</p>
+    <p>Your order has been placed</p>
     <img src="/art/success.svg" alt="Success page" loading="lazy" />
     <div class="flx">
       <p>Thank you for purchasing <a href="/#start">Blulux</a> products!</p>
