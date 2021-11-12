@@ -1,8 +1,5 @@
 <script>
-  import {
-    totalCartItems,
-    showMenu,
-  } from "../helpers/store";
+  import { totalCartItems, showMenu } from "../helpers/store";
   import Menu from "./Menu.svelte";
 
   // export let segment;
@@ -10,7 +7,6 @@
   const toggleMenu = () => {
     $showMenu = !$showMenu;
   };
-
 </script>
 
 {#if $showMenu}
@@ -37,10 +33,28 @@
       <line x1="4" y1="18" x2="18" y2="18" />
     </svg>
   </button>
-  <a rel="prefetch" href="/#start" id="home">
+  <a
+    rel="prefetch"
+    href="/#start"
+    id="home"
+    on:click={() => {
+      if ($showMenu) {
+        $showMenu = false;
+      }
+    }}
+  >
     <img src="blulux-logo.png" alt="Blulux Logo" />
   </a>
-  <a href="/cart" id="cart" aria-label="Shopping Cart Page">
+  <a
+    href="/cart"
+    id="cart"
+    aria-label="Shopping Cart Page"
+    on:click={() => {
+      if ($showMenu) {
+        $showMenu = false;
+      }
+    }}
+  >
     <div class="flx">
       <svg
         xmlns="http://www.w3.org/2000/svg"
