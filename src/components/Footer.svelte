@@ -30,7 +30,7 @@
       >,
       <a href="https://stripe.com" rel="noreferrer" target="_blank">Stripe</a>
       & <span class="heart">♥</span> by
-      <a href="https://twitter.com/skryonline" rel="noreferrer" target="_blank"
+      <a href="https://skryonline.com" rel="noreferrer" target="_blank"
         >SKRY | Online</a
       >
     </p>
