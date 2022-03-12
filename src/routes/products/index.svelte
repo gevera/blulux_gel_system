@@ -41,7 +41,7 @@
   const getProdsFromCategory = (catname, arr) =>
     arr.find((c) => c.name == catname)?.products;
 
-  $: if (searchTerm.length > 0) {
+  $: if (searchTerm?.length > 0) {
     const searchResult = fuse?.search(searchTerm);
     console.log(searchResult);
     const result = searchResult?.map((r) => r?.item);
@@ -57,7 +57,8 @@
     filteredProducts = $categoriesProd?.reverse();
   }
 
-  // $: console.log(filteredProducts);
+  $: console.log(searchTerm);
+  $: console.log(filteredProducts);
 </script>
 
 <svelte:head>
@@ -101,7 +102,7 @@
 
 <ul class="container">
   {#each $categories as category, i (i)}
-    {#if getProdsFromCategory(category, filteredProducts).length}
+    {#if getProdsFromCategory(category, filteredProducts)?.length}
       <div id={category.split(" ").join("")} class="category">
         <li>
           <h2 class="category-name">{category}</h2>
