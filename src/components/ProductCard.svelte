@@ -75,8 +75,8 @@
     {#if product?.metadata?.stock == "0"}
       <p class="out">Out of stock</p>
     {:else}
-      <div class="numbers">
-        <p>£{(product.price / 100).toFixed(2)}</p>
+    <div class="numbers">
+      <p>£{(product.price / 100).toFixed(2)}</p>
       </div>
       <button class="btn" on:click={() => addToCart(product)}
         >Add to cart</button
@@ -203,7 +203,7 @@
     z-index: 12;
   }
 
-  @media (max-width: 680px) {
+ @media (max-width: 680px) {
     .item {
       border-bottom: 1px solid var(--gray-white);
       padding: 2rem 0;

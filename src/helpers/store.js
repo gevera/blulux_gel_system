@@ -8,7 +8,7 @@ export const totalCartItems = derived(cart, ($cart) =>
   $cart.reduce((acc, p) => p.qty + acc, 0)
 );
 export const cartTotal = derived(cart, ($cart) =>
-  $cart.reduce((acc, p) => p.price * p.qty + acc, 0)
+$cart.reduce((acc, p) => p.price * p.qty + acc, 0)
 );
 export const categories = derived(productList, ($productList) => [
   // "all",

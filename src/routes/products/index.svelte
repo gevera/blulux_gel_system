@@ -38,7 +38,7 @@
       }
     });
 
-  const getProdsFormCategory = (catname, arr) =>
+  const getProdsFromCategory = (catname, arr) =>
     arr.find((c) => c.name == catname)?.products;
 
   $: if (searchTerm.length > 0) {
@@ -100,12 +100,12 @@
 
 <ul class="container">
   {#each $categories as category, i (i)}
-    {#if getProdsFormCategory(category, filteredProducts).length}
+    {#if getProdsFromCategory(category, filteredProducts).length}
       <div id={category.split(" ").join("")} class="category">
         <li>
           <h2 class="category-name">{category}</h2>
           <ul class="items">
-            {#each getProdsFormCategory(category, filteredProducts) as product, i (i)}
+            {#each getProdsFromCategory(category, filteredProducts) as product, i (i)}
               <ProductCard {product} />
             {/each}
           </ul>
