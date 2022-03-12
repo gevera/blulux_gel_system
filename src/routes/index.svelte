@@ -18,8 +18,7 @@
   import About from "../components/About.svelte";
   import Categories from "../components/Categories.svelte";
   import New from "../components/New.svelte";
-  console.log($productList);
-
+  // console.log($productList);
 </script>
 
 <Hero />
