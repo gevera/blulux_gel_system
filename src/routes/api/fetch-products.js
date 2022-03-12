@@ -8,8 +8,10 @@ export async function get(req, res) {
     expand: ["data.product"],
     limit: 100
   });
+
+  const filterArchivedPrices = prices.filter(p => p.active)
   // console.log("Fetched!", counter++);
   // console.log("PRICES =============>", prices);
-  const product_list = mergeProductList(prices);
+  const product_list = mergeProductList(filterArchivedPrices);
   res.json({ data: product_list });
 }
