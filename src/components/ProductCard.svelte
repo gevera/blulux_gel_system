@@ -75,8 +75,11 @@
     {#if product?.metadata?.stock == "0"}
       <p class="out">Out of stock</p>
     {:else}
-    <div class="numbers">
-      <p>£{(product.price / 100).toFixed(2)}</p>
+      <div class="numbers flx">
+        {#if product.metadata.sale}
+          <div class="crossed">£{(product.metadata.sale / 100).toFixed(2)}</div>
+        {/if}
+        <div>£{(product.price / 100).toFixed(2)}</div>
       </div>
       <button class="btn" on:click={() => addToCart(product)}
         >Add to cart</button
@@ -124,7 +127,6 @@
     font-size: 1.6rem;
     min-height: 50px;
   }
-
   .description {
     font-size: 1.2rem;
     color: var(--gray);
@@ -203,7 +205,19 @@
     z-index: 12;
   }
 
- @media (max-width: 680px) {
+  .flx {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    justify-content: center;
+  }
+  .crossed {
+    font-style: italic;
+    color: var(--gray-dark);
+    text-decoration: line-through;
+  }
+
+  @media (max-width: 680px) {
     .item {
       border-bottom: 1px solid var(--gray-white);
       padding: 2rem 0;

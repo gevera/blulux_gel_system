@@ -43,8 +43,9 @@
 
   $: if (searchTerm.length > 0) {
     const searchResult = fuse?.search(searchTerm);
-    const result = searchResult.map((r) => r?.item);
-    filteredProducts = $categoriesProd.reduce((newArr, c) => {
+    console.log(searchResult);
+    const result = searchResult?.map((r) => r?.item);
+    filteredProducts = $categoriesProd?.reduce((newArr, c) => {
       return result?.length
         ? [
             ...newArr,
@@ -53,7 +54,7 @@
         : [...newArr];
     }, []);
   } else {
-    filteredProducts = $categoriesProd.reverse();
+    filteredProducts = $categoriesProd?.reverse();
   }
 
   // $: console.log(filteredProducts);
