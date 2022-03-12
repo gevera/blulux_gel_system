@@ -30,7 +30,7 @@
       name: "tools",
       pic: "/pics/tools.jpg",
       description:
-        "Best-in-class instruments are simple and multifunctional in use. Carbide Cutters feature fast performance, lower heating and almost no dust while Diamond Burs are used for work with soft tissues – end of nail plate as well as cuticle removal. They are all made in Russia.",
+        "Best-in-class instruments are simple and multifunctional in use. Carbide Cutters feature fast performance, lower heating and almost no dust while Diamond Burs are used for work with soft tissues – end of nail plate as well as cuticle removal.",
     },
     {
       name: "specials",

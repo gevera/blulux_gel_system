@@ -59,7 +59,7 @@
     <img
       on:click={() => toggleShowImage(product.images[0])}
       class="product-image"
-      src={product.images.length ? product.images[0] : "/art/no_image.svg"}
+      src={product.images?.length ? product.images[0] : "/art/no_image.svg"}
       alt={product.name}
       loading="lazy"
     />

@@ -8,9 +8,11 @@
     categoriesProd,
   } from "../../helpers/store";
   import ProductCard from "../../components/ProductCard.svelte";
+  import Fuse from "fuse.js";
+  let fuse;
   let filteredProducts = [];
 
-  // console.log("PRODUCT LIST", $productList);
+  // $: console.log("PRODUCT LIST", $productList);
   // console.log("IT IS EMPTY", !$productList.length);
 
   let searchTerm = "";
@@ -20,20 +22,38 @@
       const res = await fetch(`api/fetch-products`);
       const { data } = await res.json();
       $productList = [...data];
+      fuse = new Fuse([...data], {
+        includeScore: false,
+        keys: ["name", "description", "pirce", "metadata.category", "id"],
+      });
     }
   });
 
+  const putInCategories = (c, arr) =>
+    arr.filter((p) => {
+      if (c != "specials" && p.metadata?.category == c) {
+        return p;
+      } else if (c == "specials" && !p.metadata.hasOwnProperty("category")) {
+        return p;
+      }
+    });
+
+  const getProdsFormCategory = (catname, arr) =>
+    arr.find((c) => c.name == catname)?.products;
+
   $: if (searchTerm.length > 0) {
+    const searchResult = fuse?.search(searchTerm);
+    const result = searchResult.map((r) => r?.item);
     filteredProducts = $categoriesProd.reduce((newArr, c) => {
-      let filtCategory = c.products.filter((p) =>
-        p.name.toLowerCase().includes(searchTerm.toLowerCase())
-      );
-      return filtCategory.length
-        ? [...newArr, { name: c.name, products: filtCategory }]
+      return result?.length
+        ? [
+            ...newArr,
+            { name: c.name, products: putInCategories(c.name, result) },
+          ]
         : [...newArr];
     }, []);
   } else {
-    filteredProducts = $categoriesProd;
+    filteredProducts = $categoriesProd.reverse();
   }
 
   // $: console.log(filteredProducts);
@@ -62,6 +82,7 @@
   </svg><input
     type="text"
     placeholder="Product search"
+    aria-label="Product Search"
     bind:value={searchTerm}
   />
 </div>
@@ -69,24 +90,28 @@
   {#if $categories.length}
     {#each $categories as category, i (i)}
       <li on:click={() => ($selectedCategory = category)}>
-        <a rel="prefetch" href={`/products#${category.split(" ").join("")}`}>{category}</a>
+        <a rel="prefetch" href={`/products#${category.split(" ").join("")}`}
+          >{category}</a
+        >
       </li>
     {/each}
   {/if}
 </ul>
 
 <ul class="container">
-  {#each filteredProducts.reverse() as category, i (i)}
-    <div id={category.name.split(" ").join("")} class="category">
-      <li>
-        <h2 class="category-name">{category.name}</h2>
-        <ul class="items">
-          {#each category.products as product, i (i)}
-            <ProductCard {product} />
-          {/each}
-        </ul>
-      </li>
-    </div>
+  {#each $categories as category, i (i)}
+    {#if getProdsFormCategory(category, filteredProducts).length}
+      <div id={category.split(" ").join("")} class="category">
+        <li>
+          <h2 class="category-name">{category}</h2>
+          <ul class="items">
+            {#each getProdsFormCategory(category, filteredProducts) as product, i (i)}
+              <ProductCard {product} />
+            {/each}
+          </ul>
+        </li>
+      </div>
+    {/if}
   {/each}
 </ul>
 
@@ -150,8 +175,8 @@
     letter-spacing: 0.2rem;
     text-align: center;
     color: var(--brand-dark);
-    font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
-      Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+    font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+      Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   }
 
   .items {
