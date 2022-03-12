@@ -9,23 +9,27 @@
   } from "../../helpers/store";
   import ProductCard from "../../components/ProductCard.svelte";
   import Fuse from "fuse.js";
-  let fuse;
   let filteredProducts = [];
 
   // $: console.log("PRODUCT LIST", $productList);
   // console.log("IT IS EMPTY", !$productList.length);
 
   let searchTerm = "";
+  let fuse;
+
+  const createFuse = (arr) => new Fuse(arr, {
+        includeScore: false,
+        keys: ["name", "description", "pirce", "metadata.category", "id"],
+      });
 
   onMount(async () => {
     if (!$productList.length) {
       const res = await fetch(`api/fetch-products`);
       const { data } = await res.json();
       $productList = [...data];
-      fuse = new Fuse([...data], {
-        includeScore: false,
-        keys: ["name", "description", "pirce", "metadata.category", "id"],
-      });
+      fuse = createFuse([...data]);
+    } else {
+      fuse = createFuse($productList);
     }
   });
 
@@ -52,9 +56,9 @@
       ]
       : [...newArr];
     }, []);
-    console.log(searchTerm);
-    console.log(searchResult);
-    console.log(filteredProducts);
+    // console.log(searchTerm);
+    // console.log(searchResult);
+    // console.log(filteredProducts);
   } else {
     filteredProducts = $categoriesProd?.reverse();
   }
@@ -121,7 +125,7 @@
 <!-- <pre>{JSON.stringify($productList, null, 2)}</pre> -->
 <style>
   #top {
-    padding-top: 4rem;
+    padding-top: 5rem;
     margin-top: -4rem;
   }
   .search {
