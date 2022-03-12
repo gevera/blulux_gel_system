@@ -43,22 +43,21 @@
 
   $: if (searchTerm?.length > 0) {
     const searchResult = fuse?.search(searchTerm);
-    console.log(searchResult);
     const result = searchResult?.map((r) => r?.item);
     filteredProducts = $categoriesProd?.reduce((newArr, c) => {
       return result?.length
-        ? [
-            ...newArr,
-            { name: c.name, products: putInCategories(c.name, result) },
-          ]
-        : [...newArr];
+      ? [
+        ...newArr,
+        { name: c.name, products: putInCategories(c.name, result) },
+      ]
+      : [...newArr];
     }, []);
+    console.log(searchTerm);
+    console.log(searchResult);
+    console.log(filteredProducts);
   } else {
     filteredProducts = $categoriesProd?.reverse();
   }
-
-  $: console.log(searchTerm);
-  $: console.log(filteredProducts);
 </script>
 
 <svelte:head>
