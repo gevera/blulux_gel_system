@@ -1,7 +1,28 @@
 import { stripe } from "../../server";
 
+const allowed_countries = [
+  "GB",
+  "IE",
+  "BE",
+  "CZ",
+  "HR",
+  "CY",
+  "ES",
+  "PT",
+  "FR",
+  "DE",
+  "IT",
+  "IL",
+  "RO",
+  "NL",
+  "AU",
+  "US",
+  "CA",
+];
+
 const shippingRates = {
-  international: ["shr_1JmF9aE2Lv1oi1f0S8RTQvRi"],
+  // international: ["shr_1JmF9aE2Lv1oi1f0S8RTQvRi"], // 10pounds
+  international: ["shr_1KhUbrE2Lv1oi1f0V9mgBoBN"], // 20 pounds
   standard: ["shr_1JSO2JE2Lv1oi1f0DKa0ZCxe"],
   free: ["shr_1JPsUAE2Lv1oi1f0l8dqMIPb"],
 };
@@ -34,6 +55,9 @@ export async function post(req, res) {
       payment_method_types: ["card"],
       mode: "payment",
       allow_promotion_codes: true,
+      phone_number_collection: {
+        enabled: true,
+      },
       success_url:
         "https://bluluxshop.com/success?session_id={CHECKOUT_SESSION_ID}",
       cancel_url: "https://bluluxshop.com/cancel",
@@ -44,23 +68,7 @@ export async function post(req, res) {
         ? shippingRates.standard
         : shippingRates.international,
       shipping_address_collection: {
-        allowed_countries: [
-          "GB",
-          "IE",
-          "BE",
-          "CZ",
-          "CY",
-          "ES",
-          "PT",
-          "FR",
-          "DE",
-          "IT",
-          "RO",
-          "NL",
-          "AU",
-          "US",
-          "CA",
-        ],
+        allowed_countries,
       },
       line_items: lineItems,
     });

@@ -12,13 +12,14 @@ export async function post(req, res) {
     const { city, country, line1, line2, postal_code } =
       session?.shipping?.address;
     const email = session?.customer_details?.email;
+    const telephone = session?.customer_details?.phone;
     const confirmNumber = session.payment_intent.slice(-7).toUpperCase();
     const totalAmount = (session.amount_total / 100).toFixed(2);
     const now = new Date().getTime();
 
     const telegaObj = {
       name,
-      telephone: email,
+      telephone: `${telephone} || ${email}`,
       message: `Order has been made!
       Confirmation number:> <b>${confirmNumber}</b>
       Total amount:> <b>${totalAmount}</b>
@@ -35,7 +36,7 @@ export async function post(req, res) {
       console.log("Writing to DB new order! =====>");
       const resCreateOrder = await db.query(createOrder, [
         name,
-        email,
+        `${telephone} || ${email}`,
         confirmNumber,
         totalAmount,
         city,
