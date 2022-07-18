@@ -11,16 +11,18 @@
   import Fuse from "fuse.js";
   let filteredProducts = [];
 
+  // $: console.log('CATEGORIES', $categories);
   // $: console.log("PRODUCT LIST", $productList);
   // console.log("IT IS EMPTY", !$productList.length);
 
   let searchTerm = "";
   let fuse;
 
-  const createFuse = (arr) => new Fuse(arr, {
-        includeScore: false,
-        keys: ["name", "description", "pirce", "metadata.category", "id"],
-      });
+  const createFuse = (arr) =>
+    new Fuse(arr, {
+      includeScore: false,
+      keys: ["name", "description", "pirce", "metadata.category", "id"],
+    });
 
   onMount(async () => {
     if (!$productList.length) {
@@ -50,11 +52,11 @@
     const result = searchResult?.map((r) => r?.item);
     filteredProducts = $categoriesProd?.reduce((newArr, c) => {
       return result?.length
-      ? [
-        ...newArr,
-        { name: c.name, products: putInCategories(c.name, result) },
-      ]
-      : [...newArr];
+        ? [
+            ...newArr,
+            { name: c.name, products: putInCategories(c.name, result) },
+          ]
+        : [...newArr];
     }, []);
     // console.log(searchTerm);
     // console.log(searchResult);

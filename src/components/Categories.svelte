@@ -26,6 +26,12 @@
       description:
         "A true hybrid between hard gel system and acrylic system. AcryGels are more flexible than acrylic and stronger than hard gels. They are perfect for long, short nail enhancement, overlay and strengthening. Avalable in 8 shades.",
     },
+    // {
+    //   name: "gel polishers",
+    //   pic: "/pics/cover_bases.jpg",
+    //   description:
+    //     "A true hybrid between hard gel system and acrylic system. AcryGels are more flexible than acrylic and stronger than hard gels. They are perfect for long, short nail enhancement, overlay and strengthening. Avalable in 8 shades.",
+    // },
     {
       name: "tools",
       pic: "/pics/tools.jpg",

@@ -1,17 +1,24 @@
 import { stripe } from "../../server";
 import { mergeProductList } from "../../helpers";
 
-// let counter = 1;
-
 export async function get(req, res) {
-  const { data: prices } = await stripe.prices.list({
+  let { data: prices } = await stripe.prices.list({
     expand: ["data.product"],
+    active: true,
     limit: 100
   });
 
-  const filterArchivedPrices = prices.filter(p => p.active)
-  // console.log("Fetched!", counter++);
+  if(prices.length >= 100) {
+    const { data: morePrices } = await stripe.prices.list({
+      expand: ["data.product"],
+      active: true,
+      limit: 100,
+      starting_after: prices[prices.length -1]?.id
+    });
+    prices = [...prices, ...morePrices]
+  }
+
   // console.log("PRICES =============>", prices);
-  const product_list = mergeProductList(filterArchivedPrices);
+  const product_list = mergeProductList(prices);
   res.json({ data: product_list });
 }
