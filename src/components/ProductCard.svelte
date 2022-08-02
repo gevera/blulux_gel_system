@@ -16,6 +16,9 @@
   };
 
   const addToCart = (prod) => {
+    if (window) {
+      window.dataLayer.push({ event: "add_to_cart" });
+    }
     let foundP = $cart.find((p) => p.id == prod.price_id);
     if (foundP) {
       // foundP.qty = foundP.qty + prod.quantity;
