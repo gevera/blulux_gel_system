@@ -9,6 +9,7 @@
 
 <svelte:head>
   <title>Homepage | Blulux Shop</title>
+  <meta name="facebook-domain-verification" content="21exaaia8s9vzxwoqxqyw2lp4yslih" />
 </svelte:head>
 
 <script>
